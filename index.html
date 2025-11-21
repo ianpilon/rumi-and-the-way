@@ -1,0 +1,862 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NeuroKick | The Story</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            overflow: hidden;
+        }
+        
+        .slide {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            page-break-after: always;
+            scroll-snap-align: start;
+            cursor: pointer;
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, #FF6B35 0%, #FF8C42 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-snap-type: y mandatory;
+            overflow-y: scroll;
+        }
+
+        /* Slide counter */
+        .slide-counter {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: rgba(0,0,0,0.7);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            z-index: 1000;
+        }
+
+        /* Navigation hint */
+        .nav-hint {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            background: rgba(0,0,0,0.7);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 12px;
+            z-index: 1000;
+        }
+
+        /* Progress bar */
+        .progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 4px;
+            background: #FF6B35;
+            z-index: 1000;
+            transition: width 0.3s ease;
+        }
+
+        @media print {
+            .slide {
+                page-break-after: always;
+            }
+            .slide-counter, .nav-hint, .progress-bar {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body class="bg-white">
+    <!-- Progress Bar -->
+    <div class="progress-bar" id="progressBar"></div>
+    
+    <!-- Slide Counter -->
+    <div class="slide-counter" id="slideCounter">1 / 21</div>
+    
+    <!-- Navigation Hint -->
+    <div class="nav-hint">Click or press → to advance | ← to go back</div>
+
+    <!-- Slide 1: Title -->
+    <div class="slide bg-gradient-to-br from-gray-900 to-gray-800">
+        <div class="text-center px-12 max-w-5xl">
+            <div class="text-7xl font-bold mb-6">
+                <span class="text-white">Neuro</span><span class="text-orange-500">Kick</span>
+            </div>
+            <h1 class="text-4xl md:text-5xl font-bold text-white mb-8">
+                The Hardest Career Transition<br/>
+                <span class="gradient-text">Nobody Talks About</span>
+            </h1>
+            <p class="text-2xl text-gray-400">
+                The Story of the Missing Support System
+            </p>
+        </div>
+    </div>
+
+    <!-- Slide 2: The Real Question -->
+    <div class="slide">
+        <div class="max-w-5xl px-12 w-full text-center">
+            <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-12 leading-tight">
+                Every year, millions of people get<br/>
+                <span class="gradient-text">promoted into management</span>—<br/>
+                without being taught how to lead.
+            </h2>
+            
+            <p class="text-3xl text-gray-600">
+                It's the hardest career transition nobody talks about.
+            </p>
+        </div>
+    </div>
+
+    <!-- Slide 3: The Uncomfortable Truth -->
+    <div class="slide bg-orange-500">
+        <div class="max-w-5xl px-12 w-full text-center text-white">
+            <div class="text-9xl font-bold mb-8">56%</div>
+            <h2 class="text-4xl font-bold mb-6">
+                of managers have never been trained<br/>
+                to manage people
+            </h2>
+            <p class="text-2xl text-orange-100">
+                We promote people for technical excellence,<br/>
+                then expect them to magically know how to lead.
+            </p>
+        </div>
+    </div>
+
+    <!-- Slide 4: The Transition Problem -->
+    <div class="slide">
+        <div class="max-w-5xl px-12 w-full text-center">
+            <h2 class="text-4xl font-bold text-gray-900 mb-12">
+                The hardest career transition nobody talks about
+            </h2>
+            
+            <div class="grid grid-cols-2 gap-12 mb-12">
+                <div class="bg-gray-50 p-10 rounded-2xl">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6">Individual Contributor</h3>
+                    <ul class="text-left space-y-3 text-lg text-gray-600">
+                        <li>✓ Success = your output</li>
+                        <li>✓ Control your own work</li>
+                        <li>✓ Clear metrics (code shipped, deals closed)</li>
+                        <li>✓ Problems have technical solutions</li>
+                    </ul>
+                </div>
+
+                <div class="bg-orange-50 p-10 rounded-2xl border-2 border-orange-500">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6">Manager</h3>
+                    <ul class="text-left space-y-3 text-lg text-gray-600">
+                        <li>? Success = your team's output</li>
+                        <li>? Influence without control</li>
+                        <li>? Fuzzy metrics (engagement, growth)</li>
+                        <li>? Problems require people solutions</li>
+                    </ul>
+                </div>
+            </div>
+
+            <p class="text-2xl text-gray-700">
+                <span class="font-bold">Different job. Different skills.</span><br/>
+                Same person. No training.
+            </p>
+        </div>
+    </div>
+
+    <!-- Slide 5: The Human Story -->
+    <div class="slide bg-gray-50">
+        <div class="max-w-5xl px-12 w-full">
+            <h2 class="text-4xl font-bold text-gray-900 mb-12 text-center">
+                This story plays out everywhere.
+            </h2>
+            
+            <div class="space-y-8 text-2xl text-gray-700">
+                <div class="bg-white p-8 rounded-2xl shadow-sm">
+                    <p>
+                        <span class="text-orange-500 font-bold">Sarah</span> was a brilliant engineer. Best on her team. So they promoted her to manager. Makes sense, right?
+                    </p>
+                </div>
+
+                <div class="bg-white p-8 rounded-2xl shadow-sm">
+                    <p>
+                        <span class="text-orange-500 font-bold">Nobody taught her</span> how to give feedback, run 1-on-1s, navigate conflict, or develop her team. She was expected to just... figure it out.
+                    </p>
+                </div>
+
+                <div class="bg-white p-8 rounded-2xl shadow-sm">
+                    <p>
+                        <span class="text-orange-500 font-bold">When her team struggled,</span> Sarah got blamed. But she was never set up to succeed in the first place.
+                    </p>
+                </div>
+            </div>
+
+            <div class="mt-8 text-center">
+                <p class="text-2xl text-orange-500 font-bold">
+                    Sarah isn't the problem. The system is.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 6: The Real Cost -->
+    <div class="slide">
+        <div class="max-w-5xl px-12 w-full text-center">
+            <h2 class="text-4xl font-bold text-gray-900 mb-12">
+                When we fail managers, everyone pays
+            </h2>
+            
+            <div class="text-9xl font-bold gradient-text mb-8">$8.8T</div>
+            
+            <p class="text-3xl text-gray-700 mb-4">
+                The annual global cost of the management gap
+            </p>
+            <p class="text-xl text-gray-500">
+                That's 9% of global GDP. Lost because we don't help managers become leaders.
+            </p>
+        </div>
+    </div>
+
+    <!-- Slide 7: Three People, One Broken System -->
+    <div class="slide bg-gray-50">
+        <div class="max-w-6xl px-12 w-full">
+            <h2 class="text-4xl font-bold text-gray-900 mb-12 text-center">
+                Three people. One broken system.
+            </h2>
+            
+            <div class="grid grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-2xl shadow-lg">
+                    <div class="text-5xl mb-6">🙋‍♀️</div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">The Manager</h3>
+                    <p class="text-gray-600 mb-4">
+                        Wants to be great at leading.
+                    </p>
+                    <p class="text-gray-600 mb-4">
+                        Gets a one-time training course.
+                    </p>
+                    <p class="text-gray-600 mb-4">
+                        No ongoing feedback or support.
+                    </p>
+                    <p class="text-orange-500 font-semibold">
+                        Left to figure it out alone.
+                    </p>
+                </div>
+
+                <div class="bg-white p-8 rounded-2xl shadow-lg">
+                    <div class="text-5xl mb-6">👩‍💼</div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">The L&D Leader</h3>
+                    <p class="text-gray-600 mb-4">
+                        Builds training programs.
+                    </p>
+                    <p class="text-gray-600 mb-4">
+                        Only 23% of managers use them.
+                    </p>
+                    <p class="text-gray-600 mb-4">
+                        Can't prove they work.
+                    </p>
+                    <p class="text-orange-500 font-semibold">
+                        Gets blamed when managers struggle.
+                    </p>
+                </div>
+
+                <div class="bg-white p-8 rounded-2xl shadow-lg">
+                    <div class="text-5xl mb-6">👨‍💻</div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">The HR Leader</h3>
+                    <p class="text-gray-600 mb-4">
+                        Sees turnover rising.
+                    </p>
+                    <p class="text-gray-600 mb-4">
+                        Exit interviews say "my manager."
+                    </p>
+                    <p class="text-gray-600 mb-4">
+                        But by then it's too late.
+                    </p>
+                    <p class="text-orange-500 font-semibold">
+                        No early warning system.
+                    </p>
+                </div>
+            </div>
+
+            <div class="mt-12 text-center">
+                <p class="text-2xl text-gray-700">
+                    <span class="font-bold">Everyone is trying.</span> The system isn't helping any of them.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 8: Why Current Solutions Don't Work -->
+    <div class="slide">
+        <div class="max-w-5xl px-12 w-full">
+            <h2 class="text-4xl font-bold text-gray-900 mb-12 text-center">
+                Why current solutions don't help
+            </h2>
+            
+            <div class="space-y-6">
+                <div class="flex items-center gap-6 bg-red-50 p-6 rounded-xl">
+                    <div class="text-4xl">❌</div>
+                    <div>
+                        <div class="text-xl font-bold text-gray-900">One-time training programs</div>
+                        <div class="text-gray-600">Learning doesn't stick. The transition to leadership requires continuous support, not a workshop.</div>
+                    </div>
+                </div>
+
+                <div class="flex items-center gap-6 bg-red-50 p-6 rounded-xl">
+                    <div class="text-4xl">❌</div>
+                    <div>
+                        <div class="text-xl font-bold text-gray-900">Executive coaching</div>
+                        <div class="text-gray-600">$50K per person only works for the C-suite. Middle managers—where the gap is biggest—get nothing.</div>
+                    </div>
+                </div>
+
+                <div class="flex items-center gap-6 bg-red-50 p-6 rounded-xl">
+                    <div class="text-4xl">❌</div>
+                    <div>
+                        <div class="text-xl font-bold text-gray-900">Annual 360 reviews</div>
+                        <div class="text-gray-600">Once a year is too slow. Managers need real-time feedback to develop leadership behaviors.</div>
+                    </div>
+                </div>
+
+                <div class="flex items-center gap-6 bg-red-50 p-6 rounded-xl">
+                    <div class="text-4xl">❌</div>
+                    <div>
+                        <div class="text-xl font-bold text-gray-900">Performance tracking tools</div>
+                        <div class="text-gray-600">Managers don't trust tools that feel like they're being watched. 23% adoption means 77% get no help.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 9: The Insight -->
+    <div class="slide bg-gradient-to-br from-gray-900 to-gray-800">
+        <div class="max-w-5xl px-12 w-full text-center text-white">
+            <h2 class="text-3xl font-bold text-orange-500 mb-8">
+                Then we realized something
+            </h2>
+            
+            <p class="text-4xl md:text-5xl font-bold leading-tight mb-12">
+                "Managers want to grow.<br/>
+                They just need a <span class="text-orange-500">safe space</span> to do it."
+            </p>
+
+            <p class="text-2xl text-gray-400">
+                The problem isn't motivation.<br/>
+                It's that every tool feels like it's tracking them, not helping them.<br/>
+                What if we built something they could actually trust?
+            </p>
+        </div>
+    </div>
+
+    <!-- Slide 10: The Key Insight -->
+    <div class="slide">
+        <div class="max-w-5xl px-12 w-full text-center">
+            <h2 class="text-4xl font-bold text-gray-900 mb-12">
+                The breakthrough insight
+            </h2>
+            
+            <div class="bg-orange-50 p-12 rounded-3xl border-2 border-orange-500 mb-12">
+                <p class="text-3xl text-gray-900 font-bold leading-relaxed">
+                    "When managers actively engage with development,<br/>
+                    <span class="text-orange-500">that IS the signal.</span>"
+                </p>
+            </div>
+
+            <div class="text-xl text-gray-600 space-y-4">
+                <p>Companies don't need to track performance scores.</p>
+                <p>They don't need to see assessment results.</p>
+                <p><strong>Engagement with growth predicts success.</strong></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 11: The Solution -->
+    <div class="slide bg-gray-50">
+        <div class="max-w-5xl px-12 w-full text-center">
+            <h2 class="text-3xl font-bold text-gray-500 mb-4">
+                So we built
+            </h2>
+            
+            <div class="text-7xl font-bold mb-6">
+                <span class="text-gray-900">Neuro</span><span class="text-orange-500">Kick</span>
+            </div>
+
+            <h3 class="text-4xl font-bold text-gray-900 mb-8">
+                The Leadership Intelligence Platform
+            </h3>
+
+            <p class="text-2xl text-gray-600 max-w-3xl mx-auto">
+                A platform that helps managers <span class="text-orange-500 font-bold">develop leadership behaviors</span> with continuous, private feedback—while giving organizations the intelligence to support them.
+            </p>
+        </div>
+    </div>
+
+    <!-- Slide 12: How It Works -->
+    <div class="slide">
+        <div class="max-w-5xl px-12 w-full">
+            <h2 class="text-4xl font-bold text-gray-900 mb-12 text-center">
+                Here's how it works
+            </h2>
+            
+            <div class="space-y-8">
+                <div class="flex items-start gap-6">
+                    <div class="w-16 h-16 bg-orange-500 text-white rounded-full flex items-center justify-center text-2xl font-bold flex-shrink-0">1</div>
+                    <div class="bg-gray-50 p-6 rounded-xl flex-1">
+                        <div class="text-xl font-bold text-gray-900 mb-2">Managers get their own private development space</div>
+                        <div class="text-gray-600">Real-time insights on their leadership behaviors. Personalized coaching. Completely confidential—their data never leaves their dashboard.</div>
+                    </div>
+                </div>
+
+                <div class="flex items-start gap-6">
+                    <div class="w-16 h-16 bg-orange-500 text-white rounded-full flex items-center justify-center text-2xl font-bold flex-shrink-0">2</div>
+                    <div class="bg-gray-50 p-6 rounded-xl flex-1">
+                        <div class="text-xl font-bold text-gray-900 mb-2">Trust creates usage</div>
+                        <div class="text-gray-600">Managers won't use tools that feel like they're being watched. Privacy-first design means they actually have a reason to show up and develop.</div>
+                    </div>
+                </div>
+
+                <div class="flex items-start gap-6">
+                    <div class="w-16 h-16 bg-orange-500 text-white rounded-full flex items-center justify-center text-2xl font-bold flex-shrink-0">3</div>
+                    <div class="bg-gray-50 p-6 rounded-xl flex-1">
+                        <div class="text-xl font-bold text-gray-900 mb-2">L&D and HR see who's investing in growth</div>
+                        <div class="text-gray-600">Not performance scores—just engagement patterns. Who's developing? Who might need extra support? Early signals, not lagging indicators.</div>
+                    </div>
+                </div>
+
+                <div class="flex items-start gap-6">
+                    <div class="w-16 h-16 bg-orange-500 text-white rounded-full flex items-center justify-center text-2xl font-bold flex-shrink-0">4</div>
+                    <div class="bg-gray-50 p-6 rounded-xl flex-1">
+                        <div class="text-xl font-bold text-gray-900 mb-2">Managers develop. Teams thrive. Business improves.</div>
+                        <div class="text-gray-600">Continuous feedback loop creates real behavior change. Retention goes up. Engagement goes up. Finally, proof that leadership development works.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 13: The Privacy Promise -->
+    <div class="slide bg-gray-50">
+        <div class="max-w-5xl px-12 w-full">
+            <h2 class="text-4xl font-bold text-gray-900 mb-12 text-center">
+                The key: Trust through privacy
+            </h2>
+            
+            <div class="grid grid-cols-2 gap-12">
+                <div class="bg-green-50 p-8 rounded-2xl border-2 border-green-500">
+                    <h3 class="text-2xl font-bold text-green-700 mb-6">✓ What the company sees</h3>
+                    <ul class="space-y-3 text-lg text-gray-700">
+                        <li>• Which managers are investing in development</li>
+                        <li>• Engagement patterns over time</li>
+                        <li>• Where to offer additional support</li>
+                        <li>• Connection to team outcomes</li>
+                    </ul>
+                </div>
+
+                <div class="bg-red-50 p-8 rounded-2xl border-2 border-red-400">
+                    <h3 class="text-2xl font-bold text-red-600 mb-6">✗ What stays private</h3>
+                    <ul class="space-y-3 text-lg text-gray-700">
+                        <li>• Individual assessment scores</li>
+                        <li>• Personal growth areas</li>
+                        <li>• Coaching conversations</li>
+                        <li>• Development struggles</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="mt-12 bg-white p-8 rounded-2xl shadow-lg text-center">
+                <p class="text-2xl text-gray-900 mb-4">
+                    <span class="font-bold">Think of it like a fitness app for leadership.</span>
+                </p>
+                <p class="text-xl text-gray-600">
+                    Your company knows you're working out.<br/>
+                    They don't see your weight, your struggles, or what you're working on.<br/>
+                    <span class="text-orange-500 font-semibold">That's between you and your coach.</span>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 14: Everyone Wins -->
+    <div class="slide">
+        <div class="max-w-6xl px-12 w-full">
+            <h2 class="text-4xl font-bold text-gray-900 mb-12 text-center">
+                Now everyone can win
+            </h2>
+            
+            <div class="grid grid-cols-3 gap-8">
+                <div class="bg-orange-50 p-8 rounded-2xl text-center">
+                    <div class="text-5xl mb-6">🙋‍♀️</div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Managers</h3>
+                    <div class="text-orange-500 text-xl font-bold mb-4">"I can grow without fear."</div>
+                    <ul class="text-left space-y-2 text-gray-600">
+                        <li>✓ Private space to develop</li>
+                        <li>✓ Real-time feedback</li>
+                        <li>✓ Support for the transition</li>
+                        <li>✓ No surveillance anxiety</li>
+                    </ul>
+                </div>
+
+                <div class="bg-orange-50 p-8 rounded-2xl text-center">
+                    <div class="text-5xl mb-6">👩‍💼</div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">L&D Leaders</h3>
+                    <div class="text-orange-500 text-xl font-bold mb-4">"I can prove it works."</div>
+                    <ul class="text-left space-y-2 text-gray-600">
+                        <li>✓ Higher adoption through trust</li>
+                        <li>✓ Connect to business outcomes</li>
+                        <li>✓ Board-ready ROI metrics</li>
+                        <li>✓ Know who needs support</li>
+                    </ul>
+                </div>
+
+                <div class="bg-orange-50 p-8 rounded-2xl text-center">
+                    <div class="text-5xl mb-6">👨‍💻</div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">HR Leaders</h3>
+                    <div class="text-orange-500 text-xl font-bold mb-4">"I can help early."</div>
+                    <ul class="text-left space-y-2 text-gray-600">
+                        <li>✓ Early warning signals</li>
+                        <li>✓ Proactive support</li>
+                        <li>✓ Reduce preventable turnover</li>
+                        <li>✓ Data-driven decisions</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 15: The Thesis -->
+    <div class="slide bg-orange-500">
+        <div class="max-w-5xl px-12 w-full text-white">
+            <h2 class="text-4xl font-bold mb-16 text-center">
+                The thesis we're proving
+            </h2>
+            
+            <div class="grid grid-cols-3 gap-8 text-center">
+                <div>
+                    <div class="text-6xl font-bold mb-4">Trust</div>
+                    <div class="text-xl text-orange-100">drives adoption</div>
+                    <div class="text-lg text-orange-200 mt-2">(privacy-first design vs. surveillance)</div>
+                </div>
+
+                <div>
+                    <div class="text-6xl font-bold mb-4">Adoption</div>
+                    <div class="text-xl text-orange-100">drives development</div>
+                    <div class="text-lg text-orange-200 mt-2">(managers who show up, grow)</div>
+                </div>
+
+                <div>
+                    <div class="text-6xl font-bold mb-4">Development</div>
+                    <div class="text-xl text-orange-100">drives retention</div>
+                    <div class="text-lg text-orange-200 mt-2">(better managers, better teams)</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 16: The Potential Impact -->
+    <div class="slide">
+        <div class="max-w-5xl px-12 w-full">
+            <h2 class="text-4xl font-bold text-gray-900 mb-12 text-center">
+                The potential impact
+            </h2>
+            
+            <div class="bg-gray-50 p-10 rounded-2xl mb-8">
+                <div class="text-xl text-gray-600 mb-6">For a company with 10 managers (about 80 employees):</div>
+                
+                <div class="grid grid-cols-2 gap-8 mb-8">
+                    <div>
+                        <div class="text-gray-600 mb-2">When one manager struggles:</div>
+                        <div class="text-5xl font-bold text-gray-900">2-3</div>
+                        <div class="text-2xl text-gray-700">team members leave</div>
+                        <div class="text-sm text-gray-500 mt-2">(at ~$50K replacement cost each = $100-150K lost)</div>
+                    </div>
+                    <div>
+                        <div class="text-gray-600 mb-2">When that manager gets support early:</div>
+                        <div class="text-5xl font-bold text-green-600">0</div>
+                        <div class="text-2xl text-gray-700">preventable departures</div>
+                        <div class="text-sm text-gray-500 mt-2">(manager develops, team stays, everyone wins)</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white p-8 rounded-2xl shadow-lg text-center">
+                <p class="text-xl text-gray-700">
+                    <span class="font-bold">In a 10-manager company, every manager matters.</span><br/>
+                    One struggling manager can affect 10% of your entire workforce.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 17: The Category -->
+    <div class="slide bg-gray-50">
+        <div class="max-w-5xl px-12 py-16 w-full text-center">
+            <h2 class="text-3xl font-bold text-gray-500 mb-6">
+                We're building something new
+            </h2>
+            
+            <div class="text-6xl font-bold gradient-text mb-10" style="line-height: 1.2; padding-bottom: 8px;">
+                Leadership Intelligence
+            </div>
+
+            <p class="text-2xl text-gray-600 max-w-3xl mx-auto mb-12">
+                A new approach to developing managers that combines continuous, private feedback with organizational intelligence—so managers get the support they need, and companies can finally invest in leadership with confidence.
+            </p>
+
+            <div class="inline-block bg-white p-8 rounded-2xl shadow-lg">
+                <p class="text-xl text-gray-700">
+                    <span class="font-bold">Old approach:</span> Train once, hope it sticks, track performance<br/>
+                    <span class="font-bold">New approach:</span> Continuous development, private feedback, track growth
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 18: The Bigger Picture -->
+    <div class="slide">
+        <div class="max-w-5xl px-12 w-full text-center">
+            <h2 class="text-4xl font-bold text-gray-900 mb-12">
+                Why this matters beyond business
+            </h2>
+            
+            <div class="space-y-8 text-left max-w-3xl mx-auto">
+                <div class="flex items-start gap-6">
+                    <div class="text-4xl">🙋‍♀️</div>
+                    <p class="text-2xl text-gray-700">
+                        <span class="font-bold">Managers get real support</span><br/>
+                        <span class="text-gray-500">Not just a workshop—continuous help for the hardest transition of their career</span>
+                    </p>
+                </div>
+
+                <div class="flex items-start gap-6">
+                    <div class="text-4xl">💼</div>
+                    <p class="text-2xl text-gray-700">
+                        <span class="font-bold">Teams get better leaders</span><br/>
+                        <span class="text-gray-500">Because their managers are actually developing, not just guessing</span>
+                    </p>
+                </div>
+
+                <div class="flex items-start gap-6">
+                    <div class="text-4xl">🏠</div>
+                    <p class="text-2xl text-gray-700">
+                        <span class="font-bold">People go home happier</span><br/>
+                        <span class="text-gray-500">Good managers create good work experiences—that affects everything</span>
+                    </p>
+                </div>
+
+                <div class="flex items-start gap-6">
+                    <div class="text-4xl">🌍</div>
+                    <p class="text-2xl text-gray-700">
+                        <span class="font-bold">Work gets better for everyone</span><br/>
+                        <span class="text-gray-500">One supported manager at a time</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 19: The Vision -->
+    <div class="slide bg-gradient-to-br from-gray-900 to-gray-800">
+        <div class="max-w-5xl px-12 w-full text-center text-white">
+            <h2 class="text-4xl font-bold mb-12">Our vision</h2>
+            
+            <p class="text-4xl md:text-5xl font-bold leading-tight mb-12">
+                A world where every manager<br/>
+                gets the support to become<br/>
+                <span class="text-orange-500">the leader their team deserves.</span>
+            </p>
+
+            <p class="text-2xl text-gray-400">
+                Private development that managers actually want to use.<br/>
+                Continuous support that actually works.
+            </p>
+        </div>
+    </div>
+
+    <!-- Slide 20: If This Resonates -->
+    <div class="slide">
+        <div class="max-w-5xl px-12 w-full text-center">
+            <h2 class="text-4xl font-bold text-gray-900 mb-12">
+                If any of this resonated...
+            </h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+                <div class="bg-orange-50 p-8 rounded-2xl">
+                    <div class="text-4xl mb-4">🙋‍♀️</div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">If you're a manager</h3>
+                    <p class="text-gray-600">
+                        And you want real support for the transition to leadership—tools you can actually trust...
+                    </p>
+                </div>
+
+                <div class="bg-orange-50 p-8 rounded-2xl">
+                    <div class="text-4xl mb-4">👩‍💼</div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">If you're in L&D</h3>
+                    <p class="text-gray-600">
+                        And you want to actually help managers develop and prove it works...
+                    </p>
+                </div>
+
+                <div class="bg-orange-50 p-8 rounded-2xl">
+                    <div class="text-4xl mb-4">👨‍💻</div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">If you're in HR</h3>
+                    <p class="text-gray-600">
+                        And you want to support managers before they struggle, not after...
+                    </p>
+                </div>
+            </div>
+
+            <p class="text-2xl text-gray-700 mb-8">
+                Let's talk about how Leadership Intelligence can help.
+            </p>
+
+            <div class="text-xl text-gray-600">
+                <div class="mb-2"><span class="font-bold">Website:</span> neurokick.com</div>
+                <div class="mb-2"><span class="font-bold">See what it costs:</span> neurokick.com/roi-calculator</div>
+                <div><span class="font-bold">Get a demo:</span> neurokick.com/demo</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 21: Closing -->
+    <div class="slide bg-orange-500" id="slide-21" data-slide="21">
+        <div class="text-center px-12 max-w-4xl text-white">
+            <div class="text-8xl font-bold mb-8">
+                <span class="text-white">Neuro</span><span class="text-gray-900">Kick</span>
+            </div>
+            
+            <h2 class="text-4xl font-bold mb-6">
+                Helping managers become the leaders<br/>they want to be.
+            </h2>
+            
+            <p class="text-2xl mb-12 text-orange-100">
+                The Leadership Intelligence Platform
+            </p>
+            
+            <div class="space-y-3 text-xl">
+                <div>neurokick.com</div>
+                <div>Ian Pilon, Founder</div>
+                <div><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="7d15181111123d1318080f1216141e16531c14">[email&#160;protected]</a></div>
+            </div>
+        </div>
+    </div>
+
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+        // Configuration
+        const totalSlides = 21;
+        let currentSlide = 1;
+
+        // Get all slides and add IDs
+        const slides = document.querySelectorAll('.slide');
+        slides.forEach((slide, index) => {
+            slide.id = `slide-${index + 1}`;
+            slide.dataset.slide = index + 1;
+        });
+
+        // Update slide counter and progress bar
+        function updateUI() {
+            document.getElementById('slideCounter').textContent = `${currentSlide} / ${totalSlides}`;
+            document.getElementById('progressBar').style.width = `${(currentSlide / totalSlides) * 100}%`;
+        }
+
+        // Navigate to specific slide
+        function goToSlide(slideNum) {
+            if (slideNum < 1) slideNum = 1;
+            if (slideNum > totalSlides) slideNum = totalSlides;
+            
+            currentSlide = slideNum;
+            const targetSlide = document.getElementById(`slide-${slideNum}`);
+            if (targetSlide) {
+                targetSlide.scrollIntoView({ behavior: 'smooth' });
+                updateUI();
+            }
+        }
+
+        // Next slide
+        function nextSlide() {
+            if (currentSlide < totalSlides) {
+                goToSlide(currentSlide + 1);
+            }
+        }
+
+        // Previous slide
+        function prevSlide() {
+            if (currentSlide > 1) {
+                goToSlide(currentSlide - 1);
+            }
+        }
+
+        // Click handler - click anywhere to advance
+        document.addEventListener('click', function(e) {
+            // Check if click is on left or right side of screen
+            const clickX = e.clientX;
+            const screenWidth = window.innerWidth;
+            
+            if (clickX < screenWidth * 0.2) {
+                // Left 20% - go back
+                prevSlide();
+            } else {
+                // Rest of screen - go forward
+                nextSlide();
+            }
+        });
+
+        // Keyboard navigation
+        document.addEventListener('keydown', function(e) {
+            switch(e.key) {
+                case 'ArrowRight':
+                case 'ArrowDown':
+                case ' ':
+                case 'Enter':
+                case 'PageDown':
+                    e.preventDefault();
+                    nextSlide();
+                    break;
+                case 'ArrowLeft':
+                case 'ArrowUp':
+                case 'PageUp':
+                case 'Backspace':
+                    e.preventDefault();
+                    prevSlide();
+                    break;
+                case 'Home':
+                    e.preventDefault();
+                    goToSlide(1);
+                    break;
+                case 'End':
+                    e.preventDefault();
+                    goToSlide(totalSlides);
+                    break;
+            }
+        });
+
+        // Track scroll position to update current slide
+        let scrollTimeout;
+        window.addEventListener('scroll', function() {
+            clearTimeout(scrollTimeout);
+            scrollTimeout = setTimeout(function() {
+                // Find which slide is most visible
+                let maxVisibility = 0;
+                let visibleSlide = 1;
+                
+                slides.forEach((slide, index) => {
+                    const rect = slide.getBoundingClientRect();
+                    const visibility = Math.min(rect.bottom, window.innerHeight) - Math.max(rect.top, 0);
+                    
+                    if (visibility > maxVisibility) {
+                        maxVisibility = visibility;
+                        visibleSlide = index + 1;
+                    }
+                });
+                
+                if (visibleSl
