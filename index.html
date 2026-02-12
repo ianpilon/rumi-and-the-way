@@ -3,16 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NeuroKick | The Story</title>
+    <title>Rumi & The Way | Brand Brief</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
-        
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
         body {
             font-family: 'Inter', sans-serif;
             overflow: hidden;
         }
-        
+
+        .font-serif {
+            font-family: 'Playfair Display', serif;
+        }
+
         .slide {
             min-height: 100vh;
             display: flex;
@@ -22,9 +26,9 @@
             scroll-snap-align: start;
             cursor: pointer;
         }
-        
+
         .gradient-text {
-            background: linear-gradient(135deg, #FF6B35 0%, #FF8C42 100%);
+            background: linear-gradient(135deg, #92702A 0%, #C9A84C 50%, #92702A 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -36,7 +40,6 @@
             overflow-y: scroll;
         }
 
-        /* Slide counter */
         .slide-counter {
             position: fixed;
             bottom: 20px;
@@ -49,7 +52,6 @@
             z-index: 1000;
         }
 
-        /* Navigation hint */
         .nav-hint {
             position: fixed;
             bottom: 20px;
@@ -62,15 +64,20 @@
             z-index: 1000;
         }
 
-        /* Progress bar */
         .progress-bar {
             position: fixed;
             top: 0;
             left: 0;
-            height: 4px;
-            background: #FF6B35;
+            height: 3px;
+            background: linear-gradient(90deg, #92702A, #C9A84C);
             z-index: 1000;
             transition: width 0.3s ease;
+        }
+
+        .divider {
+            width: 60px;
+            height: 2px;
+            background: #C9A84C;
         }
 
         @media print {
@@ -83,695 +90,341 @@
         }
     </style>
 </head>
-<body class="bg-white">
+<body class="bg-stone-50">
     <!-- Progress Bar -->
     <div class="progress-bar" id="progressBar"></div>
-    
+
     <!-- Slide Counter -->
-    <div class="slide-counter" id="slideCounter">1 / 21</div>
-    
+    <div class="slide-counter" id="slideCounter">1 / 9</div>
+
     <!-- Navigation Hint -->
-    <div class="nav-hint">Click or press → to advance | ← to go back</div>
+    <div class="nav-hint">Click or press &rarr; to advance | &larr; to go back</div>
 
     <!-- Slide 1: Title -->
-    <div class="slide bg-gradient-to-br from-gray-900 to-gray-800">
+    <div class="slide bg-gradient-to-br from-stone-900 via-stone-800 to-stone-900">
         <div class="text-center px-12 max-w-5xl">
-            <div class="text-7xl font-bold mb-6">
-                <span class="text-white">Neuro</span><span class="text-orange-500">Kick</span>
-            </div>
-            <h1 class="text-4xl md:text-5xl font-bold text-white mb-8 opacity-80">
-                The Hardest Career Transition<br/>
-                Nobody Talks About
+            <div class="divider mx-auto mb-10"></div>
+            <h1 class="font-serif text-6xl md:text-8xl font-bold text-white mb-6 tracking-tight">
+                Rumi <span class="text-amber-600">&</span> The Way
             </h1>
-            <p class="text-2xl text-gray-400">
-                The Story of the Missing Support System
+            <div class="divider mx-auto mt-8 mb-10"></div>
+            <p class="text-2xl text-stone-400 font-light tracking-wide">
+                Brand Brief
+            </p>
+            <p class="text-lg text-stone-500 mt-6">
+                February 2026 &nbsp;|&nbsp; Confidential
             </p>
         </div>
     </div>
 
-    <!-- Slide 2: The Real Question -->
-    <div class="slide">
-        <div class="max-w-5xl px-12 w-full text-center">
-            <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-12 leading-tight">
-                Every year, millions of people get<br/>
-                <span class="gradient-text">promoted into management</span>—<br/>
-                without being taught how to lead.
-            </h2>
-            
-            <p class="text-3xl text-gray-600">
-                It's the hardest career transition nobody talks about.
-            </p>
+    <!-- Slide 2: The Origin -->
+    <div class="slide bg-stone-50">
+        <div class="max-w-4xl px-12 w-full text-center">
+            <p class="text-sm font-semibold tracking-widest text-amber-700 uppercase mb-8">The Origin</p>
+
+            <blockquote class="font-serif text-4xl md:text-5xl text-stone-800 leading-tight mb-10 italic">
+                "As you start to walk on the way,<br/>the way appears."
+            </blockquote>
+
+            <p class="text-xl text-stone-500 mb-12">— Rumi, 13th century</p>
+
+            <div class="divider mx-auto mb-12"></div>
+
+            <div class="text-xl text-stone-600 space-y-6 max-w-3xl mx-auto text-left">
+                <p>
+                    800 years ago, the Persian poet Rumi wrote words that still cut through the noise of modern life.
+                </p>
+                <p>
+                    This isn't just a poem. It's a product philosophy. A framework for building in a world where AI is accelerating everything around us.
+                </p>
+                <p class="font-semibold text-stone-800">
+                    The way doesn't appear before you move. It appears because you move.
+                </p>
+            </div>
         </div>
     </div>
 
-    <!-- Slide 3: The Uncomfortable Truth -->
-    <div class="slide bg-orange-500">
+    <!-- Slide 3: The Tension -->
+    <div class="slide bg-gradient-to-br from-stone-900 via-stone-800 to-stone-900">
         <div class="max-w-5xl px-12 w-full text-center text-white">
-            <div class="text-9xl font-bold mb-8">56%</div>
-            <h2 class="text-4xl font-bold mb-6">
-                of managers have never been trained<br/>
-                to manage people
-            </h2>
-            <p class="text-2xl text-orange-100">
-                We promote people for technical excellence,<br/>
-                then expect them to magically know how to lead.
-            </p>
-        </div>
-    </div>
+            <p class="text-sm font-semibold tracking-widest text-amber-500 uppercase mb-10">The Tension</p>
 
-    <!-- Slide 4: The Transition Problem -->
-    <div class="slide">
-        <div class="max-w-5xl px-12 w-full text-center">
-            <h2 class="text-4xl font-bold text-gray-900 mb-12">
-                The hardest career transition nobody talks about
+            <h2 class="font-serif text-4xl md:text-5xl font-bold leading-tight mb-12">
+                AI is making the world move at a pace<br/>that's never existed before.
             </h2>
-            
-            <div class="grid grid-cols-2 gap-12 mb-12">
-                <div class="bg-gray-50 p-10 rounded-2xl">
-                    <h3 class="text-2xl font-bold text-gray-900 mb-6">Individual Contributor</h3>
-                    <ul class="text-left space-y-3 text-lg text-gray-600">
-                        <li>✓ Success = your output</li>
-                        <li>✓ Control your own work</li>
-                        <li>✓ Clear metrics (code shipped, deals closed)</li>
-                        <li>✓ Problems have technical solutions</li>
-                    </ul>
-                </div>
 
-                <div class="bg-orange-50 p-10 rounded-2xl border-2 border-orange-500">
-                    <h3 class="text-2xl font-bold text-gray-900 mb-6">Manager</h3>
-                    <ul class="text-left space-y-3 text-lg text-gray-600">
-                        <li>? Success = your team's output</li>
-                        <li>? Influence without control</li>
-                        <li>? Fuzzy metrics (engagement, growth)</li>
-                        <li>? Problems require people solutions</li>
-                    </ul>
-                </div>
+            <div class="text-xl text-stone-400 space-y-6 max-w-3xl mx-auto mb-14">
+                <p>
+                    The pressure to ship faster, decide faster, build faster is immense. Everyone is shouting: move fast, disrupt, scale.
+                </p>
+                <p>
+                    But the companies that win aren't the ones moving the fastest. They're the ones <span class="text-amber-500">paying the most attention.</span>
+                </p>
+                <p>
+                    The ones who slow down enough to be fully present — to hear what their customers are actually saying, to see what's actually emerging.
+                </p>
             </div>
 
-            <p class="text-2xl text-gray-700">
-                <span class="font-bold">Different job. Different skills.</span><br/>
-                Same person. No training.
+            <div class="divider mx-auto mb-10"></div>
+
+            <p class="font-serif text-3xl md:text-4xl italic text-amber-500">
+                Speed is the default.<br/>Presence is the advantage.
             </p>
         </div>
     </div>
 
-    <!-- Slide 5: The Human Story -->
-    <div class="slide bg-gray-50">
+    <!-- Slide 4: Philosophy - Belief 1 -->
+    <div class="slide bg-stone-50">
         <div class="max-w-5xl px-12 w-full">
-            <h2 class="text-4xl font-bold text-gray-900 mb-12 text-center">
-                This story plays out everywhere.
+            <p class="text-sm font-semibold tracking-widest text-amber-700 uppercase mb-10 text-center">The Philosophy</p>
+
+            <h2 class="font-serif text-4xl md:text-5xl font-bold text-stone-800 mb-16 text-center">
+                Three core beliefs
             </h2>
-            
-            <div class="space-y-8 text-2xl text-gray-700">
-                <div class="bg-white p-8 rounded-2xl shadow-sm">
-                    <p>
-                        <span class="text-orange-500 font-bold">Sarah</span> was a brilliant engineer. Best on her team. So they promoted her to manager. Makes sense, right?
+
+            <div class="space-y-10 max-w-3xl mx-auto">
+                <div class="bg-white p-10 rounded-2xl shadow-sm border border-stone-200">
+                    <div class="text-amber-700 font-semibold text-lg mb-3">01</div>
+                    <h3 class="font-serif text-3xl font-bold text-stone-800 mb-4">Customer discovery is the product.</h3>
+                    <p class="text-xl text-stone-600 leading-relaxed">
+                        We don't build and then ask if people want it. We walk alongside our customers and let the path emerge from real conversations, real needs, and real patterns. Discovery isn't a phase. It's the work itself.
                     </p>
                 </div>
 
-                <div class="bg-white p-8 rounded-2xl shadow-sm">
-                    <p>
-                        <span class="text-orange-500 font-bold">Nobody taught her</span> how to give feedback, run 1-on-1s, navigate conflict, or develop her team. She was expected to just... figure it out.
+                <div class="bg-white p-10 rounded-2xl shadow-sm border border-stone-200">
+                    <div class="text-amber-700 font-semibold text-lg mb-3">02</div>
+                    <h3 class="font-serif text-3xl font-bold text-stone-800 mb-4">Calm is a competitive edge.</h3>
+                    <p class="text-xl text-stone-600 leading-relaxed">
+                        In a world of reactive building, we choose intentional building. We slow down not because we're behind, but because clarity requires stillness. The best insights come when you stop long enough to actually receive them.
                     </p>
                 </div>
 
-                <div class="bg-white p-8 rounded-2xl shadow-sm">
-                    <p>
-                        <span class="text-orange-500 font-bold">When her team struggled,</span> Sarah got blamed. But she was never set up to succeed in the first place.
+                <div class="bg-white p-10 rounded-2xl shadow-sm border border-stone-200">
+                    <div class="text-amber-700 font-semibold text-lg mb-3">03</div>
+                    <h3 class="font-serif text-3xl font-bold text-stone-800 mb-4">The way appears in real time.</h3>
+                    <p class="text-xl text-stone-600 leading-relaxed">
+                        We don't pretend to have a five-year roadmap carved in stone. What we have is a commitment to walking forward, staying alert, and building what the path reveals. This is not a lack of vision — it is the deepest form of vision.
                     </p>
-                </div>
-            </div>
-
-            <div class="mt-8 text-center">
-                <p class="text-2xl text-orange-500 font-bold">
-                    Sarah isn't the problem. The system is.
-                </p>
-            </div>
-        </div>
-    </div>
-
-    <!-- Slide 6: The Real Cost -->
-    <div class="slide">
-        <div class="max-w-5xl px-12 w-full text-center">
-            <h2 class="text-4xl font-bold text-gray-900 mb-12">
-                When we fail managers, everyone pays
-            </h2>
-            
-            <div class="text-9xl font-bold gradient-text mb-8">$8.8T</div>
-            
-            <p class="text-3xl text-gray-700 mb-4">
-                The annual global cost of the management gap
-            </p>
-            <p class="text-xl text-gray-500">
-                That's 9% of global GDP. Lost because we don't help managers become leaders.
-            </p>
-        </div>
-    </div>
-
-    <!-- Slide 7: Three People, One Broken System -->
-    <div class="slide bg-gray-50">
-        <div class="max-w-6xl px-12 w-full">
-            <h2 class="text-4xl font-bold text-gray-900 mb-12 text-center">
-                Three people. One broken system.
-            </h2>
-            
-            <div class="grid grid-cols-3 gap-8">
-                <div class="bg-white p-8 rounded-2xl shadow-lg">
-                    <div class="text-5xl mb-6">🙋‍♀️</div>
-                    <h3 class="text-2xl font-bold text-gray-900 mb-4">The Manager</h3>
-                    <p class="text-gray-600 mb-4">
-                        Wants to be great at leading.
-                    </p>
-                    <p class="text-gray-600 mb-4">
-                        Gets a one-time training course.
-                    </p>
-                    <p class="text-gray-600 mb-4">
-                        No ongoing feedback or support.
-                    </p>
-                    <p class="text-orange-500 font-semibold">
-                        Left to figure it out alone.
-                    </p>
-                </div>
-
-                <div class="bg-white p-8 rounded-2xl shadow-lg">
-                    <div class="text-5xl mb-6">👩‍💼</div>
-                    <h3 class="text-2xl font-bold text-gray-900 mb-4">The L&D Leader</h3>
-                    <p class="text-gray-600 mb-4">
-                        Builds training programs.
-                    </p>
-                    <p class="text-gray-600 mb-4">
-                        Only 23% of managers use them.
-                    </p>
-                    <p class="text-gray-600 mb-4">
-                        Can't prove they work.
-                    </p>
-                    <p class="text-orange-500 font-semibold">
-                        Gets blamed when managers struggle.
-                    </p>
-                </div>
-
-                <div class="bg-white p-8 rounded-2xl shadow-lg">
-                    <div class="text-5xl mb-6">👨‍💻</div>
-                    <h3 class="text-2xl font-bold text-gray-900 mb-4">The HR Leader</h3>
-                    <p class="text-gray-600 mb-4">
-                        Sees turnover rising.
-                    </p>
-                    <p class="text-gray-600 mb-4">
-                        Exit interviews say "my manager."
-                    </p>
-                    <p class="text-gray-600 mb-4">
-                        But by then it's too late.
-                    </p>
-                    <p class="text-orange-500 font-semibold">
-                        No early warning system.
-                    </p>
-                </div>
-            </div>
-
-            <div class="mt-12 text-center">
-                <p class="text-2xl text-gray-700">
-                    <span class="font-bold">Everyone is trying.</span> The system isn't helping any of them.
-                </p>
-            </div>
-        </div>
-    </div>
-
-    <!-- Slide 8: Why Current Solutions Don't Work -->
-    <div class="slide">
-        <div class="max-w-5xl px-12 w-full">
-            <h2 class="text-4xl font-bold text-gray-900 mb-12 text-center">
-                Why current solutions don't help
-            </h2>
-            
-            <div class="space-y-6">
-                <div class="flex items-center gap-6 bg-red-50 p-6 rounded-xl">
-                    <div class="text-4xl">❌</div>
-                    <div>
-                        <div class="text-xl font-bold text-gray-900">One-time training programs</div>
-                        <div class="text-gray-600">Learning doesn't stick. The transition to leadership requires continuous support, not a workshop.</div>
-                    </div>
-                </div>
-
-                <div class="flex items-center gap-6 bg-red-50 p-6 rounded-xl">
-                    <div class="text-4xl">❌</div>
-                    <div>
-                        <div class="text-xl font-bold text-gray-900">Executive coaching</div>
-                        <div class="text-gray-600">$50K per person only works for the C-suite. Middle managers—where the gap is biggest—get nothing.</div>
-                    </div>
-                </div>
-
-                <div class="flex items-center gap-6 bg-red-50 p-6 rounded-xl">
-                    <div class="text-4xl">❌</div>
-                    <div>
-                        <div class="text-xl font-bold text-gray-900">Annual 360 reviews</div>
-                        <div class="text-gray-600">Once a year is too slow. Managers need real-time feedback to develop leadership behaviors.</div>
-                    </div>
-                </div>
-
-                <div class="flex items-center gap-6 bg-red-50 p-6 rounded-xl">
-                    <div class="text-4xl">❌</div>
-                    <div>
-                        <div class="text-xl font-bold text-gray-900">Performance tracking tools</div>
-                        <div class="text-gray-600">Managers don't trust tools that feel like they're being watched. 23% adoption means 77% get no help.</div>
-                    </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Slide 9: The Insight -->
-    <div class="slide bg-gradient-to-br from-gray-900 to-gray-800">
-        <div class="max-w-5xl px-12 w-full text-center text-white">
-            <h2 class="text-3xl font-bold text-orange-500 mb-8">
-                Then we realized something
-            </h2>
-            
-            <p class="text-4xl md:text-5xl font-bold leading-tight mb-12">
-                "Managers want to grow.<br/>
-                They just need a <span class="text-orange-500">safe space</span> to do it."
-            </p>
-
-            <p class="text-2xl text-gray-400">
-                The problem isn't motivation.<br/>
-                It's that every tool feels like it's tracking them, not helping them.<br/>
-                What if we built something they could actually trust?
-            </p>
-        </div>
-    </div>
-
-    <!-- Slide 10: The Key Insight -->
-    <div class="slide">
-        <div class="max-w-5xl px-12 w-full text-center">
-            <h2 class="text-4xl font-bold text-gray-900 mb-12">
-                The breakthrough insight
-            </h2>
-            
-            <div class="bg-orange-50 p-12 rounded-3xl border-2 border-orange-500 mb-12">
-                <p class="text-3xl text-gray-900 font-bold leading-relaxed">
-                    "When managers actively engage with development,<br/>
-                    <span class="text-orange-500">that IS the signal.</span>"
-                </p>
-            </div>
-
-            <div class="text-xl text-gray-600 space-y-4">
-                <p>Companies don't need to track performance scores.</p>
-                <p>They don't need to see assessment results.</p>
-                <p><strong>Engagement with growth predicts success.</strong></p>
-            </div>
-        </div>
-    </div>
-
-    <!-- Slide 11: The Solution -->
-    <div class="slide bg-gray-50">
-        <div class="max-w-5xl px-12 w-full text-center">
-            <h2 class="text-3xl font-bold text-gray-500 mb-4">
-                So we built
-            </h2>
-            
-            <div class="text-7xl font-bold mb-6">
-                <span class="text-gray-900">Neuro</span><span class="text-orange-500">Kick</span>
-            </div>
-
-            <h3 class="text-4xl font-bold text-gray-900 mb-8">
-                The Leadership Intelligence Platform
-            </h3>
-
-            <p class="text-2xl text-gray-600 max-w-3xl mx-auto">
-                A platform that helps managers <span class="text-orange-500 font-bold">develop leadership behaviors</span> with continuous, private feedback—while giving organizations the intelligence to support them.
-            </p>
-        </div>
-    </div>
-
-    <!-- Slide 12: How It Works -->
-    <div class="slide">
-        <div class="max-w-5xl px-12 w-full">
-            <h2 class="text-4xl font-bold text-gray-900 mb-12 text-center">
-                Here's how it works
-            </h2>
-            
-            <div class="space-y-8">
-                <div class="flex items-start gap-6">
-                    <div class="w-16 h-16 bg-orange-500 text-white rounded-full flex items-center justify-center text-2xl font-bold flex-shrink-0">1</div>
-                    <div class="bg-gray-50 p-6 rounded-xl flex-1">
-                        <div class="text-xl font-bold text-gray-900 mb-2">Managers get their own private development space</div>
-                        <div class="text-gray-600">Real-time insights on their leadership behaviors. Personalized coaching. Completely confidential—their data never leaves their dashboard.</div>
-                    </div>
-                </div>
-
-                <div class="flex items-start gap-6">
-                    <div class="w-16 h-16 bg-orange-500 text-white rounded-full flex items-center justify-center text-2xl font-bold flex-shrink-0">2</div>
-                    <div class="bg-gray-50 p-6 rounded-xl flex-1">
-                        <div class="text-xl font-bold text-gray-900 mb-2">Trust creates usage</div>
-                        <div class="text-gray-600">Managers won't use tools that feel like they're being watched. Privacy-first design means they actually have a reason to show up and develop.</div>
-                    </div>
-                </div>
-
-                <div class="flex items-start gap-6">
-                    <div class="w-16 h-16 bg-orange-500 text-white rounded-full flex items-center justify-center text-2xl font-bold flex-shrink-0">3</div>
-                    <div class="bg-gray-50 p-6 rounded-xl flex-1">
-                        <div class="text-xl font-bold text-gray-900 mb-2">L&D and HR see who's investing in growth</div>
-                        <div class="text-gray-600">Not performance scores—just engagement patterns. Who's developing? Who might need extra support? Early signals, not lagging indicators.</div>
-                    </div>
-                </div>
-
-                <div class="flex items-start gap-6">
-                    <div class="w-16 h-16 bg-orange-500 text-white rounded-full flex items-center justify-center text-2xl font-bold flex-shrink-0">4</div>
-                    <div class="bg-gray-50 p-6 rounded-xl flex-1">
-                        <div class="text-xl font-bold text-gray-900 mb-2">Managers develop. Teams thrive. Business improves.</div>
-                        <div class="text-gray-600">Continuous feedback loop creates real behavior change. Retention goes up. Engagement goes up. Finally, proof that leadership development works.</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Slide 13: The Privacy Promise -->
-    <div class="slide bg-gray-50">
-        <div class="max-w-5xl px-12 w-full">
-            <h2 class="text-4xl font-bold text-gray-900 mb-12 text-center">
-                The key: Trust through privacy
-            </h2>
-            
-            <div class="grid grid-cols-2 gap-12">
-                <div class="bg-green-50 p-8 rounded-2xl border-2 border-green-500">
-                    <h3 class="text-2xl font-bold text-green-700 mb-6">✓ What the company sees</h3>
-                    <ul class="space-y-3 text-lg text-gray-700">
-                        <li>• Which managers are investing in development</li>
-                        <li>• Engagement patterns over time</li>
-                        <li>• Where to offer additional support</li>
-                        <li>• Connection to team outcomes</li>
-                    </ul>
-                </div>
-
-                <div class="bg-red-50 p-8 rounded-2xl border-2 border-red-400">
-                    <h3 class="text-2xl font-bold text-red-600 mb-6">✗ What stays private</h3>
-                    <ul class="space-y-3 text-lg text-gray-700">
-                        <li>• Individual assessment scores</li>
-                        <li>• Personal growth areas</li>
-                        <li>• Coaching conversations</li>
-                        <li>• Development struggles</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="mt-12 bg-white p-8 rounded-2xl shadow-lg text-center">
-                <p class="text-2xl text-gray-900 mb-4">
-                    <span class="font-bold">Think of it like a fitness app for leadership.</span>
-                </p>
-                <p class="text-xl text-gray-600">
-                    Your company knows you're working out.<br/>
-                    They don't see your weight, your struggles, or what you're working on.<br/>
-                    <span class="text-orange-500 font-semibold">That's between you and your coach.</span>
-                </p>
-            </div>
-        </div>
-    </div>
-
-    <!-- Slide 14: Everyone Wins -->
-    <div class="slide">
-        <div class="max-w-6xl px-12 w-full">
-            <h2 class="text-4xl font-bold text-gray-900 mb-12 text-center">
-                Now everyone can win
-            </h2>
-            
-            <div class="grid grid-cols-3 gap-8">
-                <div class="bg-orange-50 p-8 rounded-2xl text-center">
-                    <div class="text-5xl mb-6">🙋‍♀️</div>
-                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Managers</h3>
-                    <div class="text-orange-500 text-xl font-bold mb-4">"I can grow without fear."</div>
-                    <ul class="text-left space-y-2 text-gray-600">
-                        <li>✓ Private space to develop</li>
-                        <li>✓ Real-time feedback</li>
-                        <li>✓ Support for the transition</li>
-                        <li>✓ No surveillance anxiety</li>
-                    </ul>
-                </div>
-
-                <div class="bg-orange-50 p-8 rounded-2xl text-center">
-                    <div class="text-5xl mb-6">👩‍💼</div>
-                    <h3 class="text-2xl font-bold text-gray-900 mb-4">L&D Leaders</h3>
-                    <div class="text-orange-500 text-xl font-bold mb-4">"I can prove it works."</div>
-                    <ul class="text-left space-y-2 text-gray-600">
-                        <li>✓ Higher adoption through trust</li>
-                        <li>✓ Connect to business outcomes</li>
-                        <li>✓ Board-ready ROI metrics</li>
-                        <li>✓ Know who needs support</li>
-                    </ul>
-                </div>
-
-                <div class="bg-orange-50 p-8 rounded-2xl text-center">
-                    <div class="text-5xl mb-6">👨‍💻</div>
-                    <h3 class="text-2xl font-bold text-gray-900 mb-4">HR Leaders</h3>
-                    <div class="text-orange-500 text-xl font-bold mb-4">"I can help early."</div>
-                    <ul class="text-left space-y-2 text-gray-600">
-                        <li>✓ Early warning signals</li>
-                        <li>✓ Proactive support</li>
-                        <li>✓ Reduce preventable turnover</li>
-                        <li>✓ Data-driven decisions</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Slide 15: The Thesis -->
-    <div class="slide bg-orange-500">
+    <!-- Slide 5: Brand Identity -->
+    <div class="slide bg-gradient-to-br from-stone-900 via-stone-800 to-stone-900">
         <div class="max-w-5xl px-12 w-full text-white">
-            <h2 class="text-4xl font-bold mb-16 text-center">
-                The thesis we're proving
-            </h2>
-            
-            <div class="grid grid-cols-3 gap-8 text-center">
-                <div>
-                    <div class="text-6xl font-bold mb-4">Trust</div>
-                    <div class="text-xl text-orange-100">drives adoption</div>
-                    <div class="text-lg text-orange-200 mt-2">(privacy-first design vs. surveillance)</div>
+            <p class="text-sm font-semibold tracking-widest text-amber-500 uppercase mb-10 text-center">Brand Identity</p>
+
+            <div class="text-center mb-16">
+                <h2 class="font-serif text-6xl font-bold mb-4">
+                    Rumi <span class="text-amber-500">&</span> The Way
+                </h2>
+                <p class="font-serif text-2xl italic text-stone-400">The way appears.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-4xl mx-auto">
+                <div class="bg-stone-800/50 p-8 rounded-2xl border border-stone-700">
+                    <h3 class="text-amber-500 font-semibold text-lg mb-4">The Name</h3>
+                    <p class="text-stone-300 leading-relaxed">
+                        The name carries the energy of a band name — soulful, memorable, human. It signals that this is a company with a story, not just a product. Every time someone asks <span class="italic text-white">"what's the name about?"</span>, you get to share the Rumi quote. That's a brand origin story that sells itself.
+                    </p>
                 </div>
 
-                <div>
-                    <div class="text-6xl font-bold mb-4">Adoption</div>
-                    <div class="text-xl text-orange-100">drives development</div>
-                    <div class="text-lg text-orange-200 mt-2">(managers who show up, grow)</div>
+                <div class="bg-stone-800/50 p-8 rounded-2xl border border-stone-700">
+                    <h3 class="text-amber-500 font-semibold text-lg mb-4">The Tagline</h3>
+                    <p class="text-stone-300 leading-relaxed">
+                        Three words. That's the whole brand promise. It speaks to customers who feel overwhelmed by options and speed. It tells them: <span class="text-white">you don't need to have it all figured out. Start walking. We'll find the way together.</span>
+                    </p>
                 </div>
 
-                <div>
-                    <div class="text-6xl font-bold mb-4">Development</div>
-                    <div class="text-xl text-orange-100">drives retention</div>
-                    <div class="text-lg text-orange-200 mt-2">(better managers, better teams)</div>
+                <div class="bg-stone-800/50 p-8 rounded-2xl border border-stone-700">
+                    <h3 class="text-amber-500 font-semibold text-lg mb-4">Shorthand & Social</h3>
+                    <p class="text-stone-300 leading-relaxed">
+                        Casual reference: <span class="text-white font-semibold">"The Way"</span> or <span class="text-white font-semibold">"RTW"</span><br/>
+                        Hashtag: <span class="text-white font-semibold">#rumiandtheway</span>
+                    </p>
+                </div>
+
+                <div class="bg-stone-800/50 p-8 rounded-2xl border border-stone-700">
+                    <h3 class="text-amber-500 font-semibold text-lg mb-4">Domain</h3>
+                    <p class="text-2xl text-white font-semibold">
+                        rumiandtheway.com
+                    </p>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Slide 16: The Potential Impact -->
-    <div class="slide">
+    <!-- Slide 6: Brand Voice -->
+    <div class="slide bg-stone-50">
         <div class="max-w-5xl px-12 w-full">
-            <h2 class="text-4xl font-bold text-gray-900 mb-12 text-center">
-                The potential impact
-            </h2>
-            
-            <div class="bg-gray-50 p-10 rounded-2xl mb-8">
-                <div class="text-xl text-gray-600 mb-6">For a company with 20 managers (about 160 employees):</div>
+            <p class="text-sm font-semibold tracking-widest text-amber-700 uppercase mb-10 text-center">Brand Voice</p>
 
-                <div class="grid grid-cols-2 gap-8 mb-8">
+            <h2 class="font-serif text-4xl font-bold text-stone-800 mb-6 text-center">
+                The way we communicate reflects<br/>the way we build.
+            </h2>
+
+            <div class="divider mx-auto mb-12"></div>
+
+            <div class="space-y-6 max-w-4xl mx-auto">
+                <div class="grid grid-cols-3 gap-6 bg-white p-6 rounded-xl border border-stone-200">
                     <div>
-                        <div class="text-gray-600 mb-2">When one manager struggles:</div>
-                        <div class="text-5xl font-bold text-gray-900">8</div>
-                        <div class="text-2xl text-gray-700">employees affected</div>
-                        <div class="text-sm text-gray-500 mt-2">(5% of your workforce - disengagement, quiet quitting, or turnover)</div>
+                        <div class="text-sm font-semibold text-amber-700 uppercase tracking-wide mb-2">We are</div>
+                        <div class="text-xl font-bold text-stone-800">Calm & grounded</div>
                     </div>
                     <div>
-                        <div class="text-gray-600 mb-2">With early support:</div>
-                        <div class="text-5xl font-bold text-green-600">60%</div>
-                        <div class="text-2xl text-gray-700">better retention & engagement</div>
-                        <div class="text-sm text-gray-500 mt-2">(manager develops, team stays, everyone wins)</div>
+                        <div class="text-sm font-semibold text-stone-400 uppercase tracking-wide mb-2">We are not</div>
+                        <div class="text-xl text-stone-500">Frantic or hype-driven</div>
+                    </div>
+                    <div>
+                        <div class="text-sm font-semibold text-amber-700 uppercase tracking-wide mb-2">We sound like</div>
+                        <div class="text-xl text-stone-600 italic">A wise friend over tea</div>
                     </div>
                 </div>
-            </div>
 
-            <div class="bg-white p-8 rounded-2xl shadow-lg text-center">
-                <p class="text-xl text-gray-700">
-                    <span class="font-bold">In a 20-manager company, every manager matters.</span><br/>
-                    One struggling manager can affect 5% of your entire workforce.
+                <div class="grid grid-cols-3 gap-6 bg-white p-6 rounded-xl border border-stone-200">
+                    <div><div class="text-xl font-bold text-stone-800">Warm & inviting</div></div>
+                    <div><div class="text-xl text-stone-500">Cold or corporate</div></div>
+                    <div><div class="text-xl text-stone-600 italic">A journal entry, not a pitch deck</div></div>
+                </div>
+
+                <div class="grid grid-cols-3 gap-6 bg-white p-6 rounded-xl border border-stone-200">
+                    <div><div class="text-xl font-bold text-stone-800">Curious & present</div></div>
+                    <div><div class="text-xl text-stone-500">Preachy or prescriptive</div></div>
+                    <div><div class="text-xl text-stone-600 italic">Someone who listens first</div></div>
+                </div>
+
+                <div class="grid grid-cols-3 gap-6 bg-white p-6 rounded-xl border border-stone-200">
+                    <div><div class="text-xl font-bold text-stone-800">Intentional</div></div>
+                    <div><div class="text-xl text-stone-500">Reckless or reactive</div></div>
+                    <div><div class="text-xl text-stone-600 italic">A deep breath before speaking</div></div>
+                </div>
+
+                <div class="grid grid-cols-3 gap-6 bg-white p-6 rounded-xl border border-stone-200">
+                    <div><div class="text-xl font-bold text-stone-800">Poetic when it matters</div></div>
+                    <div><div class="text-xl text-stone-500">Fluffy or vague</div></div>
+                    <div><div class="text-xl text-stone-600 italic">Rumi, if he were a founder</div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 7: The Story You Tell -->
+    <div class="slide bg-gradient-to-br from-stone-900 via-stone-800 to-stone-900">
+        <div class="max-w-4xl px-12 w-full text-center text-white">
+            <p class="text-sm font-semibold tracking-widest text-amber-500 uppercase mb-10">The Story You Tell</p>
+
+            <h2 class="font-serif text-3xl font-bold mb-10 text-stone-300">
+                When someone asks what Rumi & The Way does:
+            </h2>
+
+            <div class="bg-stone-800/50 p-12 rounded-3xl border border-stone-700">
+                <p class="font-serif text-2xl text-stone-200 leading-relaxed italic">
+                    "Everyone in tech is obsessed with speed right now. AI can build anything in seconds. But the hard part was never building — it was knowing <span class="text-amber-500">what</span> to build.
+                </p>
+                <br/>
+                <p class="font-serif text-2xl text-stone-200 leading-relaxed italic">
+                    We took a step back and asked: what if we slowed down enough to really listen? What if customer discovery wasn't a step before the work, but the work itself?
+                </p>
+                <br/>
+                <p class="font-serif text-2xl text-stone-200 leading-relaxed italic">
+                    There's this Rumi quote — <span class="text-amber-500">'As you start to walk on the way, the way appears.'</span> That's our whole philosophy.
+                </p>
+                <br/>
+                <p class="font-serif text-2xl text-stone-200 leading-relaxed italic">
+                    We walk with our customers, and the path reveals what to build next. Not a five-year roadmap. A living, breathing conversation."
                 </p>
             </div>
         </div>
     </div>
 
-    <!-- Slide 17: The Category -->
-    <div class="slide bg-gray-50">
-        <div class="max-w-5xl px-12 py-16 w-full text-center">
-            <h2 class="text-3xl font-bold text-gray-500 mb-6">
-                We're building something new
+    <!-- Slide 8: What's Next -->
+    <div class="slide bg-stone-50">
+        <div class="max-w-4xl px-12 w-full">
+            <p class="text-sm font-semibold tracking-widest text-amber-700 uppercase mb-10 text-center">What's Next</p>
+
+            <h2 class="font-serif text-4xl font-bold text-stone-800 mb-6 text-center">
+                The next steps aren't a rigid plan.<br/>They're the first steps on the path.
             </h2>
-            
-            <div class="text-6xl font-bold gradient-text mb-10" style="line-height: 1.2; padding-bottom: 8px;">
-                Leadership Intelligence
-            </div>
 
-            <p class="text-2xl text-gray-600 max-w-3xl mx-auto mb-12">
-                A new approach to developing managers that combines continuous, private feedback with organizational intelligence—so managers get the support they need, and companies can finally invest in leadership with confidence.
-            </p>
+            <div class="divider mx-auto mb-14"></div>
 
-            <div class="inline-block bg-white p-8 rounded-2xl shadow-lg">
-                <p class="text-xl text-gray-700">
-                    <span class="font-bold">Old approach:</span> Train once, hope it sticks, track performance<br/>
-                    <span class="font-bold">New approach:</span> Continuous development, private feedback, track growth
-                </p>
-            </div>
-        </div>
-    </div>
-
-    <!-- Slide 18: The Bigger Picture -->
-    <div class="slide">
-        <div class="max-w-5xl px-12 w-full text-center">
-            <h2 class="text-4xl font-bold text-gray-900 mb-12">
-                Why this matters beyond business
-            </h2>
-            
-            <div class="space-y-8 text-left max-w-3xl mx-auto">
+            <div class="space-y-8 max-w-3xl mx-auto">
                 <div class="flex items-start gap-6">
-                    <div class="text-4xl">🙋‍♀️</div>
-                    <p class="text-2xl text-gray-700">
-                        <span class="font-bold">Managers get real support</span><br/>
-                        <span class="text-gray-500">Not just a workshop—continuous help for the hardest transition of their career</span>
-                    </p>
+                    <div class="w-12 h-12 bg-amber-700 text-white rounded-full flex items-center justify-center text-lg font-bold flex-shrink-0">1</div>
+                    <div>
+                        <h3 class="font-serif text-2xl font-bold text-stone-800 mb-2">Start walking.</h3>
+                        <p class="text-xl text-stone-600">Begin conversations with potential customers. Listen deeply. Let the patterns emerge.</p>
+                    </div>
                 </div>
 
                 <div class="flex items-start gap-6">
-                    <div class="text-4xl">💼</div>
-                    <p class="text-2xl text-gray-700">
-                        <span class="font-bold">Teams get better leaders</span><br/>
-                        <span class="text-gray-500">Because their managers are actually developing, not just guessing</span>
-                    </p>
+                    <div class="w-12 h-12 bg-amber-700 text-white rounded-full flex items-center justify-center text-lg font-bold flex-shrink-0">2</div>
+                    <div>
+                        <h3 class="font-serif text-2xl font-bold text-stone-800 mb-2">Capture what appears.</h3>
+                        <p class="text-xl text-stone-600">Document every insight, every need, every signal from the people you serve.</p>
+                    </div>
                 </div>
 
                 <div class="flex items-start gap-6">
-                    <div class="text-4xl">🏠</div>
-                    <p class="text-2xl text-gray-700">
-                        <span class="font-bold">People go home happier</span><br/>
-                        <span class="text-gray-500">Good managers create good work experiences—that affects everything</span>
-                    </p>
+                    <div class="w-12 h-12 bg-amber-700 text-white rounded-full flex items-center justify-center text-lg font-bold flex-shrink-0">3</div>
+                    <div>
+                        <h3 class="font-serif text-2xl font-bold text-stone-800 mb-2">Build what the path reveals.</h3>
+                        <p class="text-xl text-stone-600">Let customer discovery guide what you create, not assumptions about what the market wants.</p>
+                    </div>
                 </div>
 
                 <div class="flex items-start gap-6">
-                    <div class="text-4xl">🌍</div>
-                    <p class="text-2xl text-gray-700">
-                        <span class="font-bold">Work gets better for everyone</span><br/>
-                        <span class="text-gray-500">One supported manager at a time</span>
-                    </p>
+                    <div class="w-12 h-12 bg-amber-700 text-white rounded-full flex items-center justify-center text-lg font-bold flex-shrink-0">4</div>
+                    <div>
+                        <h3 class="font-serif text-2xl font-bold text-stone-800 mb-2">Trust the process.</h3>
+                        <p class="text-xl text-stone-600">The way appears. It always does.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Slide 19: The Vision -->
-    <div class="slide bg-gradient-to-br from-gray-900 to-gray-800">
-        <div class="max-w-5xl px-12 w-full text-center text-white">
-            <h2 class="text-4xl font-bold mb-12">Our vision</h2>
-            
-            <p class="text-4xl md:text-5xl font-bold leading-tight mb-12">
-                A world where every manager<br/>
-                gets the support to become<br/>
-                <span class="text-orange-500">the leader their team deserves.</span>
-            </p>
-
-            <p class="text-2xl text-gray-400">
-                Private development that managers actually want to use.<br/>
-                Continuous support that actually works.
-            </p>
-        </div>
-    </div>
-
-    <!-- Slide 20: If This Resonates -->
-    <div class="slide">
-        <div class="max-w-5xl px-12 w-full text-center">
-            <h2 class="text-4xl font-bold text-gray-900 mb-12">
-                If any of this resonated...
-            </h2>
-            
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-                <div class="bg-orange-50 p-8 rounded-2xl">
-                    <div class="text-4xl mb-4">🙋‍♀️</div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-4">If you're a manager</h3>
-                    <p class="text-gray-600">
-                        And you want real support for the transition to leadership—tools you can actually trust...
-                    </p>
-                </div>
-
-                <div class="bg-orange-50 p-8 rounded-2xl">
-                    <div class="text-4xl mb-4">👩‍💼</div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-4">If you're in L&D</h3>
-                    <p class="text-gray-600">
-                        And you want to actually help managers develop and prove it works...
-                    </p>
-                </div>
-
-                <div class="bg-orange-50 p-8 rounded-2xl">
-                    <div class="text-4xl mb-4">👨‍💻</div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-4">If you're in HR</h3>
-                    <p class="text-gray-600">
-                        And you want to support managers before they struggle, not after...
-                    </p>
-                </div>
-            </div>
-
-            <p class="text-2xl text-gray-700 mb-8">
-                Let's talk about how Leadership Intelligence can help.
-            </p>
-
-            <div class="text-xl text-gray-600">
-                <div class="mb-2"><span class="font-bold">Website:</span> neurokick.ai</div>
-                <div><span class="font-bold">See what it costs:</span> neurokick.ai/pricing</div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Slide 21: Closing -->
-    <div class="slide bg-orange-500" id="slide-21" data-slide="21">
+    <!-- Slide 9: Closing -->
+    <div class="slide bg-gradient-to-br from-stone-900 via-stone-800 to-stone-900">
         <div class="text-center px-12 max-w-4xl text-white">
-            <div class="text-8xl font-bold mb-8">
-                <span class="text-white">Neuro</span><span class="text-gray-900">Kick</span>
-            </div>
-            
-            <h2 class="text-4xl font-bold mb-6">
-                Helping managers become the leaders<br/>they want to be.
+            <div class="divider mx-auto mb-12"></div>
+
+            <h2 class="font-serif text-6xl md:text-7xl font-bold mb-6">
+                Rumi <span class="text-amber-500">&</span> The Way
             </h2>
-            
-            <p class="text-2xl mb-12 text-orange-100">
-                The Leadership Intelligence Platform
+
+            <p class="font-serif text-3xl italic text-amber-500 mb-12">
+                The way appears.
             </p>
-            
-            <div class="space-y-3 text-xl text-gray-900">
-                <div>neurokick.ai</div>
-                <div>Ian Pilon, Founder</div>
-            </div>
+
+            <div class="divider mx-auto mb-12"></div>
+
+            <p class="text-xl text-stone-400">
+                rumiandtheway.com
+            </p>
         </div>
     </div>
 
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-        // Configuration
-        const totalSlides = 21;
+    <script>
+        const totalSlides = 9;
         let currentSlide = 1;
 
-        // Get all slides and add IDs
         const slides = document.querySelectorAll('.slide');
         slides.forEach((slide, index) => {
             slide.id = `slide-${index + 1}`;
             slide.dataset.slide = index + 1;
         });
 
-        // Update slide counter and progress bar
         function updateUI() {
             document.getElementById('slideCounter').textContent = `${currentSlide} / ${totalSlides}`;
             document.getElementById('progressBar').style.width = `${(currentSlide / totalSlides) * 100}%`;
         }
 
-        // Navigate to specific slide
         function goToSlide(slideNum) {
             if (slideNum < 1) slideNum = 1;
             if (slideNum > totalSlides) slideNum = totalSlides;
-            
+
             currentSlide = slideNum;
             const targetSlide = document.getElementById(`slide-${slideNum}`);
             if (targetSlide) {
@@ -780,36 +433,29 @@
             }
         }
 
-        // Next slide
         function nextSlide() {
             if (currentSlide < totalSlides) {
                 goToSlide(currentSlide + 1);
             }
         }
 
-        // Previous slide
         function prevSlide() {
             if (currentSlide > 1) {
                 goToSlide(currentSlide - 1);
             }
         }
 
-        // Click handler - click anywhere to advance
         document.addEventListener('click', function(e) {
-            // Check if click is on left or right side of screen
             const clickX = e.clientX;
             const screenWidth = window.innerWidth;
-            
+
             if (clickX < screenWidth * 0.2) {
-                // Left 20% - go back
                 prevSlide();
             } else {
-                // Rest of screen - go forward
                 nextSlide();
             }
         });
 
-        // Keyboard navigation
         document.addEventListener('keydown', function(e) {
             switch(e.key) {
                 case 'ArrowRight':
@@ -838,25 +484,23 @@
             }
         });
 
-        // Track scroll position to update current slide
         let scrollTimeout;
         window.addEventListener('scroll', function() {
             clearTimeout(scrollTimeout);
             scrollTimeout = setTimeout(function() {
-                // Find which slide is most visible
                 let maxVisibility = 0;
                 let visibleSlide = 1;
-                
+
                 slides.forEach((slide, index) => {
                     const rect = slide.getBoundingClientRect();
                     const visibility = Math.min(rect.bottom, window.innerHeight) - Math.max(rect.top, 0);
-                    
+
                     if (visibility > maxVisibility) {
                         maxVisibility = visibility;
                         visibleSlide = index + 1;
                     }
                 });
-                
+
                 if (visibleSlide !== currentSlide) {
                     currentSlide = visibleSlide;
                     updateUI();
@@ -864,7 +508,6 @@
             }, 100);
         });
 
-        // Initialize
         updateUI();
     </script>
 </body>
